@@ -1,0 +1,125 @@
+.streak-number {
+  font-size: 80rpx;
+  font-weight: 700;
+  color: #2b8aef;
+  text-align: center;
+  margin: 16rpx 0 12rpx;
+}
+
+.streak-label {
+  text-align: center;
+  color: #61708f;
+  font-size: 28rpx;
+}
+
+.relapse-info {
+  margin-top: 16rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #6f5ef9;
+}
+
+.relapse-info .strong {
+  font-weight: 600;
+  margin: 0 6rpx;
+}
+
+.last-action {
+  margin-top: 24rpx;
+  font-size: 26rpx;
+  color: #8592a6;
+  line-height: 1.6;
+}
+
+.note-area {
+  width: 100%;
+  min-height: 180rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-radius: 16rpx;
+  background: #f7f9ff;
+  font-size: 28rpx;
+  color: #1f2d3d;
+}
+
+.note-placeholder {
+  color: #b0b9ca;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 24rpx;
+  margin-top: 24rpx;
+}
+
+.action-buttons .primary-btn,
+.action-buttons .danger-btn {
+  flex: 1;
+}
+
+.danger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88rpx;
+  border-radius: 44rpx;
+  background: #ffe3e3;
+  color: #d64545;
+  font-size: 32rpx;
+  font-weight: 600;
+  border: none;
+}
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.log-item {
+  padding: 24rpx;
+  border-radius: 16rpx;
+  background: #f5f7ff;
+}
+
+.log-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12rpx;
+}
+
+.log-label {
+  padding: 8rpx 16rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.log-label.success {
+  background: rgba(58, 182, 90, 0.15);
+  color: #2a9d46;
+}
+
+.log-label.relapse {
+  background: rgba(214, 69, 69, 0.15);
+  color: #d64545;
+}
+
+.log-time {
+  font-size: 24rpx;
+  color: #99a5bb;
+}
+
+.log-note {
+  font-size: 26rpx;
+  color: #4a5872;
+  line-height: 1.6;
+}
+
+.empty-state {
+  text-align: center;
+  color: #9aa6be;
+  font-size: 26rpx;
+  padding: 24rpx 0;
+}

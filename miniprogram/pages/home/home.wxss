@@ -1,0 +1,100 @@
+.streak-section {
+  text-align: center;
+}
+
+.streak-days {
+  margin: 16rpx 0 12rpx;
+  font-size: 72rpx;
+  font-weight: 700;
+  color: #2b8aef;
+}
+
+.streak-unit {
+  font-size: 28rpx;
+  margin-left: 8rpx;
+}
+
+.streak-hint {
+  color: #61708f;
+  font-size: 26rpx;
+  margin-bottom: 32rpx;
+}
+
+.tasks-progress {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+}
+
+.tasks-count {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #2b8aef;
+}
+
+.tasks-tip {
+  font-size: 26rpx;
+  color: #8a94a6;
+}
+
+.quote {
+  position: relative;
+  padding: 24rpx;
+  border-radius: 16rpx;
+  background: #f0f5ff;
+  color: #1f2d3d;
+}
+
+.quote-mark {
+  font-size: 48rpx;
+  color: rgba(43, 138, 239, 0.5);
+}
+
+.quote-text {
+  font-size: 30rpx;
+  line-height: 1.6;
+  margin: 0 8rpx;
+}
+
+.quote-author {
+  margin-top: 16rpx;
+  text-align: right;
+  font-size: 26rpx;
+  color: #61708f;
+}
+
+.quick-links .link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200rpx, 1fr));
+  gap: 24rpx;
+}
+
+.link-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24rpx;
+  border-radius: 20rpx;
+  background: #f9f9ff;
+  text-align: center;
+  box-shadow: inset 0 0 0 2rpx rgba(111, 94, 249, 0.08);
+}
+
+.link-icon {
+  width: 88rpx;
+  height: 88rpx;
+  margin-bottom: 12rpx;
+}
+
+.link-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-bottom: 8rpx;
+  color: #2b3a55;
+}
+
+.link-desc {
+  font-size: 24rpx;
+  color: #7c88a0;
+}

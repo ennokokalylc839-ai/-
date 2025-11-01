@@ -1,0 +1,57 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">今日进度</view>
+    <view class="progress-overview">
+      <text class="progress-rate">{{completionRate}}%</text>
+      <view class="progress-detail">{{completedCount}} / {{totalCount}} 项已完成</view>
+      <view class="progress-tip">保持节奏，循序渐进建立新习惯</view>
+    </view>
+    <button class="secondary-btn reset-btn" bindtap="resetTodayStatus">重置今日记录</button>
+  </view>
+
+  <view class="section">
+    <view class="section-title">习惯清单</view>
+    <view class="empty-state" wx:if="{{!tasks.length}}">还没有任务，添加一个小目标吧！</view>
+    <view class="task-list" wx:else>
+      <view class="task-item" wx:for="{{tasks}}" wx:key="id">
+        <view class="task-info">
+          <view class="task-title">{{item.title}}</view>
+          <view class="task-desc">{{item.description}}</view>
+        </view>
+        <switch
+          class="task-switch"
+          checked="{{item.completed}}"
+          data-id="{{item.id}}"
+          bindchange="toggleTask"
+          color="#2b8aef"
+        ></switch>
+      </view>
+    </view>
+  </view>
+
+  <view class="section add-task-section">
+    <view class="add-header">
+      <view class="section-title">自定义任务</view>
+      <button class="link-btn" wx:if="{{!showAddForm}}" bindtap="openAddForm">+ 新增任务</button>
+      <button class="link-btn" wx:else bindtap="closeAddForm">取消</button>
+    </view>
+    <view class="add-form" wx:if="{{showAddForm}}">
+      <input
+        class="add-input"
+        placeholder="任务名称，例如：晚间30分钟阅读"
+        maxlength="40"
+        value="{{newTaskTitle}}"
+        bindinput="handleTitleInput"
+      />
+      <textarea
+        class="add-textarea"
+        placeholder="补充任务说明或激励自己的话"
+        maxlength="120"
+        value="{{newTaskDesc}}"
+        bindinput="handleDescInput"
+      ></textarea>
+      <button class="primary-btn submit-btn" bindtap="submitNewTask">保存任务</button>
+    </view>
+    <view class="add-tip">任务会保存在本地，仅自己可见，可随时修改与重置。</view>
+  </view>
+</view>
