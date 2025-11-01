@@ -1,0 +1,85 @@
+page {
+  background: #f6f7fb;
+  color: #1f2d3d;
+}
+
+.container {
+  padding: 32rpx;
+}
+
+.section {
+  margin-bottom: 32rpx;
+  padding: 32rpx;
+  border-radius: 24rpx;
+  background: #ffffff;
+  box-shadow: 0 16rpx 32rpx rgba(15, 49, 114, 0.08);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+  color: #102a43;
+}
+
+.primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88rpx;
+  border-radius: 44rpx;
+  background: linear-gradient(135deg, #2b8aef, #6f5ef9);
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88rpx;
+  border-radius: 44rpx;
+  border: 2rpx solid #2b8aef;
+  color: #2b8aef;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8rpx 20rpx;
+  border-radius: 999rpx;
+  background: rgba(43, 138, 239, 0.1);
+  color: #2b8aef;
+  font-size: 24rpx;
+}
+
+.list-item {
+  padding: 24rpx 0;
+  border-bottom: 2rpx solid #f0f3ff;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.list-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 8rpx;
+}
+
+.list-desc {
+  font-size: 26rpx;
+  color: #61708f;
+  line-height: 1.5;
+}
+
+.footer-note {
+  margin-top: 40rpx;
+  font-size: 24rpx;
+  color: #8a94a6;
+  text-align: center;
+}

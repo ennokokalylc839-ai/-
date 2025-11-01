@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">应急自救</view>
+    <view class="step-list">
+      <view class="step-item" wx:for="{{emergencySteps}}" wx:key="index">
+        <view class="step-index">{{index + 1}}</view>
+        <view class="step-text">{{item}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">专注技巧</view>
+    <view class="tips-list">
+      <view class="tip-item" wx:for="{{focusTechniques}}" wx:key="index">
+        <text class="dot"></text>
+        <text class="tip-text">{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">精选资源</view>
+    <view class="resource-group" wx:for="{{resources}}" wx:key="category">
+      <view class="group-title">{{item.category}}</view>
+      <view class="group-items">
+        <view class="resource-card" wx:for="{{item.items}}" wx:key="title">
+          <view class="resource-info">
+            <view class="resource-title">{{item.title}}</view>
+            <view class="resource-desc">{{item.description}}</view>
+          </view>
+          <button class="link-btn" data-link="{{item.link}}" bindtap="openLink">查看</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

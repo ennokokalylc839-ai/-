@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/progress/progress",
+    "pages/tasks/tasks",
+    "pages/resources/resources"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "戒色助手",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

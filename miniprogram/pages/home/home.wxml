@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="section streak-section">
+    <view class="badge">连续坚持</view>
+    <view class="streak-days">{{streakDays}}<text class="streak-unit"> 天</text></view>
+    <view class="streak-hint">{{lastRecordText}}</view>
+    <navigator url="/pages/progress/progress" class="primary-btn">去记录今日状态</navigator>
+  </view>
+
+  <view class="section">
+    <view class="section-title">今日任务完成度</view>
+    <view class="tasks-progress">
+      <text class="tasks-count">{{completedTasks}} / {{totalTasks}}</text>
+      <text class="tasks-tip">坚持完成习惯，塑造更好的自己</text>
+    </view>
+    <navigator url="/pages/tasks/tasks" class="secondary-btn">查看所有任务</navigator>
+  </view>
+
+  <view class="section">
+    <view class="section-title">今日提醒</view>
+    <view class="quote" wx:if="{{quote}}">
+      <text class="quote-mark">“</text>
+      <text class="quote-text">{{quote.text}}</text>
+      <text class="quote-mark">”</text>
+      <view class="quote-author">—— {{quote.author}}</view>
+    </view>
+  </view>
+
+  <view class="section quick-links">
+    <view class="section-title">更多支持</view>
+    <view class="link-grid">
+      <navigator url="/pages/progress/progress" class="link-item">
+        <image class="link-icon" src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/96/2b8aef/external-target-success-flatart-icons-lineal-color-flatarticons.png" mode="aspectFit" />
+        <text class="link-title">进度记录</text>
+        <text class="link-desc">记录每一步成长</text>
+      </navigator>
+      <navigator url="/pages/tasks/tasks" class="link-item">
+        <image class="link-icon" src="https://img.icons8.com/external-others-phat-plus/96/6f5ef9/external-checklist-strategy-and-management-others-phat-plus.png" mode="aspectFit" />
+        <text class="link-title">习惯任务</text>
+        <text class="link-desc">打造日常自律系统</text>
+      </navigator>
+      <navigator url="/pages/resources/resources" class="link-item">
+        <image class="link-icon" src="https://img.icons8.com/external-flaticons-flat-flat-icons/96/ffb74d/external-support-customer-service-flaticons-flat-flat-icons.png" mode="aspectFit" />
+        <text class="link-title">资源工具</text>
+        <text class="link-desc">学习技巧与求助渠道</text>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="footer-note">今日从自律开始，坚持就是胜利。</view>
+</view>

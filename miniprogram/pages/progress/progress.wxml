@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">当前坚持</view>
+    <view class="streak-number">{{streak}}</view>
+    <view class="streak-label">连续坚持天数</view>
+    <view class="relapse-info" wx:if="{{daysSinceRelapse !== null}}">
+      已经远离破戒 <text class="strong">{{daysSinceRelapse}}</text> 天
+    </view>
+    <view class="last-action">{{lastActionText}}</view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">写下此刻的想法</view>
+    <textarea
+      class="note-area"
+      placeholder="记录诱因、情绪或提醒自己的一句话"
+      placeholder-class="note-placeholder"
+      maxlength="140"
+      value="{{note}}"
+      bindinput="handleNoteInput"
+    ></textarea>
+    <view class="action-buttons">
+      <button class="primary-btn" bindtap="markSuccess">记录坚持</button>
+      <button class="danger-btn" bindtap="markRelapse">记录破戒</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">全部记录</view>
+    <view class="empty-state" wx:if="{{!logs.length}}">还没有记录，开始记录你的成长旅程吧。</view>
+    <view class="log-list" wx:else>
+      <view class="log-item" wx:for="{{logs}}" wx:key="index">
+        <view class="log-header">
+          <view class="log-label {{item.type}}">{{item.label}}</view>
+          <view class="log-time">{{item.timeLabel}}</view>
+        </view>
+        <view class="log-note" wx:if="{{item.note}}">{{item.note}}</view>
+      </view>
+    </view>
+  </view>
+</view>
